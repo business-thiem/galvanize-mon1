@@ -1,0 +1,13 @@
+Why was JavaScript turned into a specification?
+Which browsers were first to start adopting the standard?
+Which browser currently has the best support? Why?
+Which browser currently has the worst support? Why?
+
+
+Because of it's popularity after AJAX and people took it seriously as it got more successful. 
+
+Netscape and Microsoft's Internet Explorer
+
+Chrome and FireFox are usually the best supported, because they're mainly used by developers and their debugging tools are better than IEs
+
+IE would probably be the worst because of it's lack of varied support of certain JS version and standards, that's why many developers had to write backwarwds compatibility lines into their apps. 
