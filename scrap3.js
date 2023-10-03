@@ -29,6 +29,8 @@ console.log(laugh(10));
 
 // EXAMPLES BELOW ******************************************************************************************************************
 
+// ANNOYMOUS FUNCTION inline
+
 function movies(messageFunction, name) {
     messageFunction(name);
   }
@@ -37,6 +39,11 @@ function movies(messageFunction, name) {
   movies(function displayFavorite(movieName) {
     console.log("My favorite movie is " + movieName);
   }, "Finding Nemo");
+
+
+// ANNOYMOUS FUNCTION full
+
+
 
   // function expression catSays
 var catSays = function(max) {
@@ -47,6 +54,7 @@ var catSays = function(max) {
     return catMessage;
   };
   
+
   // function declaration helloCat accepting a callback
   function helloCat(callbackFunc) {
     return "Hello " + callbackFunc(3);
