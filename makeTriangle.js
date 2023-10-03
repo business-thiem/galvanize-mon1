@@ -1,3 +1,15 @@
+/*
+ * Programming Quiz: Build A Triangle (5-3)
+ */
+
+/*
+ * QUIZ REQUIREMENTS
+ * - Your code should have a `buildTriangle()` function
+ * - Your `buildTriangle()` function should take one argument (or you can say parameter)
+ * - Your `laugh()` function should build the triangle as describe above
+ */
+
+
 // creates a line of * for a given length
 function makeLine(length) {
     var line = "";
@@ -11,8 +23,8 @@ function makeLine(length) {
 
 function buildTriangle(size){
     var triStr = ""
-    for(let i = 0; i < size; i++){
-        triStr = triStr + "\n" + makeLine(i)
+    for(let i = 0; i <= size; i++){
+        triStr +=  makeLine(i) + "\n"
     }
     return triStr;
 }
