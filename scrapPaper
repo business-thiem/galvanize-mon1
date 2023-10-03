@@ -11,3 +11,6 @@ Netscape and Microsoft's Internet Explorer
 Chrome and FireFox are usually the best supported, because they're mainly used by developers and their debugging tools are better than IEs
 
 IE would probably be the worst because of it's lack of varied support of certain JS version and standards, that's why many developers had to write backwarwds compatibility lines into their apps. 
+
+
+
