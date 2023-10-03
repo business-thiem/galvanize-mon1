@@ -10,6 +10,8 @@
  */
 
 
+// IMPORTANT PERSONAL NOTE: UDACITY wanted something very specific in its string answer check, didn't bother with doing it to their exact solution. Trying to save time and moving foward after I got the concept.
+
 // creates a line of * for a given length
 function makeLine(length) {
     var line = "";
