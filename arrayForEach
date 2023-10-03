@@ -1,0 +1,9 @@
+// for accessing all parts of the array via forEach without for loop
+
+function myFunc(element, index, array){
+    console.log("element", element)
+    console.log("index", index)
+    console.log("array", array)
+}
+
+myArray.forEach(myFunc)
