@@ -17,6 +17,10 @@ function removeFromBackOfNew(arr) {
   }
 
 
+
+//see https://stackoverflow.com/questions/70301995/adding-dynamic-values-to-regex for a better in-depth sample
+//regex generator: https://regex101.com/ because regex is hardd
+
   function countCharacter(str, char) {
     // your code here
     /* START SOLUTION */
