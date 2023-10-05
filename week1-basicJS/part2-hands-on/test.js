@@ -1,19 +1,43 @@
-function getElementsUpTo(array, n) {
-    // your code here
-    /* START SOLUTION */
-    if(array.length <= 1){
-        return []
-    } 
-    
-    
-    // else if (n >= array.length){
-    //     let arr2 = array.reverse()
-    //     return arr2;
-    // }
-    return array.slice(0,n)
-    /* END SOLUTION */
+// function returnValue(value){
+//   return value;
+// }
+
+// function consoleLogValue(value){
+//   console.log(value);
+// }
+
+// var myName = returnValue('Frank');
+// var myDogsName = consoleLogValue('Tommy Gun');
+
+
+// // console.log(myDogsName)
+// // console.log(myName)
+
+
+// function sayHelloToWorld(string){
+//   return `Hello World, ${string}`;
+// }
+
+// let output = sayHelloToWorld('John')
+// console.log(output)
+
+
+
+// Don't change the function name.
+function returnPyramid(height){
+  let arr = []
+  let str = ''
+  
+  for(let i = 0; i < height; i++){
+    str += '#'
+    arr.push(str)
   }
 
+  // console.log(arr)
+  return arr;
+  
+}
 
-  var output = getElementsUpTo(['a', 'b', 'c', 'd', 'e'], 3)
-console.log(output); // --> ['a', 'b', 'c']
+returnPyramid(2); //=> ['#','##']
+returnPyramid(4); //=> ['#','##','###','####']
+returnPyramid(6); //=> ['#','##','###','####','#####','######']
