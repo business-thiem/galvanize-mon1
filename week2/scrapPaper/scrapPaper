@@ -1,0 +1,50 @@
+Pseudo Code
+60 <= x => 90 : 
+summer: true, x => 100
+
+
+let temp = [50, 78, 91, 99]
+let is_summer = false
+if(60 <= temp[i] => 90 && is_summer === false){
+    //squirrels play
+} else if (60 <= temp[i] => 100 && is_summer === true) {
+    //squirrels play
+} 
+
+Scenario 1: Not Summer
+Input with false summer: [50, 78, 91, 99]
+Output with false summer: [false, true, false, false]
+
+Scenario 2: is Summer 
+Input with true summer: [50, 78, 91, 99]
+Output with true summer: [false, false, true, true]
+
+
+
+
+
+// Reverse String: Write a function that takes a string as input and returns the string reversed.
+
+/* 
+Pseudo Code
+
+Method 1:
+    Take in a string and split it into an array
+    Take array and reverse its order
+    Combine or join the array back into a single string
+    return the steps above in one line
+
+Method 2: 
+    Create an empty string to hold the final result
+    Use a for loop to iterate over the string by index in reverse order
+    add the string[index] to the emtpy string greated before
+    return the string variable
+
+*/
+
+
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+export default reverseString
