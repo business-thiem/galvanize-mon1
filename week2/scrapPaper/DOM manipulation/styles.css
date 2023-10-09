@@ -1,0 +1,14 @@
+h1 {
+    color: midnightblue;
+    font-family: helvetica, sans-serif;
+  }
+  
+  .galvanize-link {
+    color: tomato;
+    text-decoration: none;
+  }
+  
+  .galvanize-link:hover {
+    text-decoration: underline;
+  }
+  
