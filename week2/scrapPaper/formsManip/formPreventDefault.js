@@ -1,3 +1,5 @@
+// link to JS fiddle: https://jsfiddle.net/thiemDev/ae3fjr91/3/
+
 /*
 	For each comment where you see 'EXPLAIN:' add an explanation as to what is happening on the line below. Be as verbose as possible! For the line with `preventDefault`, try clicking the 'Submit' button without it first. Then, comment that code in and see how it changes.
 */
