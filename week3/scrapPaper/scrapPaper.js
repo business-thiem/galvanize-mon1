@@ -1,6 +1,5 @@
 function customShift(arr) {
     // your code here
-
     let temp = arr[0]
     if(arr.length === 0){
         return undefined;
@@ -36,3 +35,9 @@ function customUnshift(arr, elem) {
 
 
 
+
+
+  //shift removes first element, then shift everything left 
+  //unshift moves everything right, then adds first element
+
+  //Fact: apparently both run the same O(n) time because they still go through each element of the arrays one by one to add them back in after modifying the original array
