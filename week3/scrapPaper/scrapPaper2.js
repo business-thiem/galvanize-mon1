@@ -42,7 +42,7 @@ function search2(nums,target){
 
 function searchRecursive(nums, target){
 
-    function findMiddleNumber(startIndex, endIndex, target){
+    function findMiddleNumber(startIndex, endIndex){
         if(startIndex > endIndex){
             return -1 //not found
         }
@@ -55,15 +55,16 @@ function searchRecursive(nums, target){
         } 
         //right side of array
         else if (nums[midIndex] > target){
-            return findMiddleNumber(startIndex, midIndex-1, target)
+            return findMiddleNumber(startIndex, midIndex-1)
         } 
         //left side of array
         else if (nums[midIndex] < target){
-            return findMiddleNumber(midIndex+1, endIndex, target)
+            return findMiddleNumber(midIndex+1, endIndex)
         }
     }
 
-    return findMiddleNumber(0, nums.length, target)
+    return findMiddleNumber(0, nums.length-1)
+    
     
 }
 
