@@ -6,12 +6,7 @@ function customShift(arr) {
         return undefined;
     } else {
         for(let i = 0; i < arr.length; i++){
-        
-            if(arr.length === 0){
-                return undefined;
-            } else {
-                arr[i] = arr[i+1]
-            }
+            arr[i] = arr[i+1]
         }
     }
     arr.length = arr.length - 1
