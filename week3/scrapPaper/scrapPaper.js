@@ -12,56 +12,32 @@ function customShift(arr) {
             } else {
                 arr[i] = arr[i+1]
             }
-            
         }
     }
-    
-
     arr.length = arr.length - 1
     return temp;
     // return arr;
   }
 
-// let arr = [1,2,3,4,5]
 
-// // customShift(arr)
-
-// console.log(customShift(arr))
 
 
 // notes on what to return, etc
-function customUnshift2(arr, elem) {
+function customUnshift(arr, elem) {
     // your code here 
-    let arr2 = [elem]
-    for(let i = 0; i < arr.length; i++){
-        arr2[i+1] = arr[i]
+    arr.length = arr.length + 1
+
+    //shift the elements in the array to the right after increasing the length
+    for(let i = arr.length - 1; i>0; i--){
+        arr[i] = arr[i-1]
     }
-    arr = arr2;
+
+    arr[0] = elem //then arr[0] will be open for adding elem
     return arr;
 }
 
-  let addLetter = 0
-  let arr2 = [1,2,3,4]
+  let addLetter = 'a'
+  let arr2 = ['b','c','d','e','f']
 
-
-
-console.log(customUnshift2(arr2, addLetter));
-
-
-// function customUnshift2(arr, elem) {
-//     var storage = [elem]
-//     for ( var i = 0; i < arr.length;i++) {
-//       storage[i+1] = arr[i]
-//     }
-//     arr = storage
-//     return arr;
-//   }
-
-
-function customUnshift(arr, elem){
-
-}
-
-console.log(customUnshift(arr2, addLetter));
 
 
