@@ -1,0 +1,15 @@
+1. Input: [1111] Out: [true]
+2. Input: [Civic] Out: [true]
+1. Input: [racecar] Out: [true]
+1. Input: [noons] Out: [false]
+
+
+We taking in strings, numbers or a combination. Looping through each character, reverse the value and comparing it to the original and returning a boolean.
+
+
+
+Idea 1: 
+Start with an input. Convert it to string if it isn't already. Split the string into an array of characters and loop through backwards to reverse the string, join it back together and see if it matches the original input.
+
+Idea 2: 
+Convert input into a string, use a foreach loop, assign each letter a second array backwards and join the character back together as a string and compare. 
