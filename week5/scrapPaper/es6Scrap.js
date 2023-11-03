@@ -30,6 +30,36 @@ class Shape {
     }
 }
 
-let box = new Shape(4)
+// let box = new Shape(4)
 
-box.getSideCount();
+// box.getSideCount();
+
+
+class Game {
+    constructor(title, publisher, price){
+        this.title = title;
+        this.publisher = publisher;
+        this.price = price;
+    }
+
+
+    display(){
+        console.log(this.title, 'display')
+    }
+
+    getTitle = () => {
+        console.log(this.title, 'title')
+    }
+
+    getPrice = () => {
+        console.log(this.price, 'price')
+    }
+}
+
+let game1 = new Game('COD', 'activision', 60)
+
+game1.display()
+
+game1.getTitle()
+
+// console.log(game1.getTitle())

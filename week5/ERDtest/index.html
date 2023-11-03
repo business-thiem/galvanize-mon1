@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .box {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+  }
+
+  .project {
+    background-color: lightblue;
+  }
+
+  .task {
+    background-color: lightgreen;
+  }
+
+  .collaborator {
+    background-color: lightcoral;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box project" id="project1">
+    <p>Project</p>
+    <p>ID: 1</p>
+  </div>
+  <svg height="50" width="100">
+    <line x1="0" y1="0" x2="100" y2="0" style="stroke: black; marker-end: url(#arrow);" />
+  </svg>
+  <div class="box task" id="task1">
+    <p>Task</p>
+    <p>ID: 1</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="box collaborator" id="collaborator1">
+    <p>Collaborator</p>
+    <p>ID: 1</p>
+  </div>
+  <svg height="50" width="100">
+    <line x1="0" y1="0" x2="100" y2="0" style="stroke: black; marker-end: url(#arrow);" />
+  </svg>
+  <div class="box task" id="task2">
+    <p>Task</p>
+    <p>ID: 2</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="box project" id="project2">
+    <p>Project</p>
+    <p>ID: 2</p>
+  </div>
+  <svg height="50" width="100">
+    <line x1="0" y1="0" x2="100" y2="0" style="stroke: black; marker-end: url(#arrow);" />
+  </svg>
+  <div class="box collaborator" id="collaborator2">
+    <p>Collaborator</p>
+    <p>ID: 2</p>
+  </div>
+</div>
+
+<svg style="position: absolute; height: 0;">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#000" />
+    </marker>
+  </defs>
+</svg>
+
+</body>
+</html>
