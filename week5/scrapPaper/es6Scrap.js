@@ -19,3 +19,17 @@ class ViewTracker {
     }
 
 }
+
+class Shape {
+    constructor(sides){
+        this.sides = sides
+    }
+
+    getSideCount = () => {
+        console.log(this.sides)
+    }
+}
+
+let box = new Shape(4)
+
+box.getSideCount();
