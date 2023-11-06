@@ -3,9 +3,9 @@ import pg from 'pg'
 const { Pool } = pg;
 
 const pool = new Pool({
-    user: "postgre",
-    host: "local",
-    database: "example",
+    user: "postgres",
+    host: "localhost",
+    database: "userexample2",
     password: "abc123",
     port: "5432"
 })
@@ -36,13 +36,32 @@ app.get('users/:id', async (req, res, next) => {
 
 })
 
-
 app.post('/users', async (req,res) => {
     const {name, email, age} = req.body
     let result = await pool.query(
         `INSERT INTO users (name, email, age) VALUES ($1, $2, $3) RETURNING *`, [name, email, age]
     )
     res.send(result.rows[0])
+})
+
+app.put('/users/:id', async(req,res) => {
+    const id = Number(req.params.id)
+    let { name, email, age} = req.body;
+    let result = await pool.query(
+        `UPDATE users
+        SET name = $1, email = $2, age = $3
+        WHERE = id=$4 
+        RETURNING*
+        `,
+        [name, email, age, id]
+    )
+    res.send(result)
+})
+
+
+app.delete('/users/:id', async (req,res) => {
+    const id = Number(req.params.id)
+    let result = await pool.query('DELETE from users WHERE id=$1', [id])
 })
 
 app.use( (err, req, res, next) => {

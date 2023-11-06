@@ -1,0 +1,15 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "CockroachDB",
+            "name": "galvanize-ex2",
+            "group": "galvanize-class",
+            "database": "userexample2",
+            "username": "postgres"
+        }
+    ]
+}
