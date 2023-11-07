@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pgServer1": "nodemon index.js"
+    "pgServer1": "nodemon index.js",
+    "pgProd1": "nodemon --env-file .env ./index.js" 
+    
   },
   "keywords": [],
   "author": "",
