@@ -2,8 +2,12 @@ import express from 'express'
 import pg from 'pg'
 const {Pool} = pg;
 
+const LOCAL_PORT = 3000;
 
-// see: https://neon.tech/docs/guides/node
+const app = express()
+app.use(express.json())
+
+// see: https://neon.tech/docs/guides/node for how to connect
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
     ssl: {
@@ -11,42 +15,19 @@ const pool = new Pool({
     }
 })
 
-const PORT = 3000
-const app = express()
-app.use(express.json())
-
-
-// hello world connection function
-async function getPostgresVersion() {
+app.get('/users', async (req,res) => {
     const client = await pool.connect();
-    try {
-      const response = await client.query('SELECT version()');
-      console.log(response.rows[0]);
+    try{ 
+        let result = await client.query(
+            'SELECT * FROM users'
+        );
+        res.send(result.rows)
     } finally {
-      client.release();
+        client.release(); //release connection
     }
-  }
-  
-  getPostgresVersion();
+})
 
 
-
-// pool.connect((error, client, release) => {
-//     if(error){
-//         return console.error('Error acquiring client', error.stack)
-//     }
-//     console.log('Connected to the Database')
-// })
-
-
-// app.get('/users', async (req,res) => {
-//     let result = await pool.query(
-//         'SELECT * FROM users'
-//     );
-//     res.send(result.rows)
-// })
-
-
-// app.listen(PORT, (req, res) => {
-//     console.log(`server listening on http://localhost:${PORT}`)
-// })
+app.listen(LOCAL_PORT, (req, res) => {
+    console.log(`server listening on http://localhost:${LOCAL_PORT}`)
+})
