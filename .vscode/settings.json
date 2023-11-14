@@ -10,6 +10,17 @@
             "group": "galvanize-class",
             "database": "userexample2",
             "username": "postgres"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "CockroachDB",
+            "name": "sampletest1",
+            "group": "galvanize-class",
+            "database": "sampletest1",
+            "username": "postgres"
         }
     ]
 }
