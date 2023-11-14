@@ -1,29 +1,29 @@
-DROP TABLE IF EXISTS person;
-DROP TABLE IF EXISTS company;
+DROP TABLE IF EXISTS people;
+DROP TABLE IF EXISTS companies;
 
-CREATE TABLE company(
-    id SERIAL NOT NULL,
-    name VARCHAR NOT NULL
+
+CREATE TABLE companies(
+    id SERIAL PRIMARY KEY,
+    name TEXT,
+    location TEXT
 );
 
-CREATE TABLE person(
-    id SERIAL NOT NULL,
-    fname VARCHAR NOT NULL,
-    cid INT NOT NULL
+CREATE TABLE people(
+    id SERIAL PRIMARY KEY,
+    first_name TEXT,
+    location TEXT,
+    company_id INTEGER,
+    FOREIGN KEY (company_id) REFERENCES companies(id) 
 );
 
 
-INSERT INTO company (name) VALUES
-('ABC Corporation'),
-('XYZ Inc'),
-('QWE Industries'),
-('MNO Group'),
-('PQR Ltd');
 
-INSERT INTO person (fname, cid) VALUES
-('John', 1),
-('Alice', 2),
-('Bob', 1),
-('Carol', 3),
-('David', 2);
+INSERT INTO companies (id, name, location) VALUES
+(12, 'U.S. Navy', 'Washington'),
+(90, 'CS,Inc.', 'London'),
+(123, 'Stanford', 'Plao Alto');
 
+INSERT INTO people (id, first_name, location, company_id) VALUES
+(13, 'Hopper', 'Dallas', 12),
+(48, 'Lovelace', 'New York', NULL),
+(99, 'Knuth', 'Seattle', 123)

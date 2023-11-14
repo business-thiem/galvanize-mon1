@@ -15,16 +15,37 @@ const pool = new Pool({
 
 app.use(express.json());
 
-
-app.get('/api/person', async (req, res) => {
+app.get('/api/people', async (req, res) => {
     try{
         const result = await pool.query(
-            `SELECT * FROM person;`
+            `SELECT * FROM people;`
         )
-        res.send(result.rows)
+        res.status(201).send(result.rows)
     } catch(error){
         console.log(error)
         res.status(400).json(error)
+    }
+});
+
+app.get('/people', (req,res)=>{
+    pool.query('SELECT * FROM people', (err, data) => {
+        console.log('basic get',data.rows);
+        res.send(data.rows)
+    });
+});
+
+// GET "/people/:id"
+app.get('/people/:id', async (req, res) => {
+    const { id } = req.params;
+    try{
+        const result = await pool.query(
+            `SELECT * from people
+            WHERE id=$1;`, [id]
+        );
+        res.status(201).send(result.rows)
+    } catch(error) {
+        console.log(error)
+        res.json(error)
     }
 });
 
