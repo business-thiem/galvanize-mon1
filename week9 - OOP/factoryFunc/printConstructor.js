@@ -1,9 +1,11 @@
 const Printer = (name, sheetCount) => {
+    
+
     return {
         name,
-        sheetCount,
-        addSheet(num) {
-            sheetCount += num
+        sheetCount: sheetCount || 0,
+        addSheets(num) {
+            return this.sheetCount += num;
         },
         printJob(name, size) {
             if(size > sheetCount){
@@ -21,12 +23,18 @@ const Printer = (name, sheetCount) => {
                     return;
                 }
             }
-            printing(currentPage);
-        }
+            printing(currentPage); //recursive call
+
+            // Subtract sheets from sheetCount
+            this.sheetCount -= size;
+        },
     }
 };
 
 const p1 = Printer("Canon", 5)
+console.log(p1)
+
+console.log(p1.addSheets(3))
 console.log(p1)
 
 p1.printJob('myPhotos', 3)
