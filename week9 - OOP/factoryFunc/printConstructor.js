@@ -1,6 +1,4 @@
 const Printer = (name, sheetCount) => {
-    
-
     return {
         name,
         sheetCount: sheetCount || 0,
