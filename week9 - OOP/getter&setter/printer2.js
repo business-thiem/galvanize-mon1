@@ -8,7 +8,7 @@ const Printer = (name, sheetCount = 0) => {
             return sheetCount
         },
         addSheets(numSheets) {
-            this.sheetCount += numSheets;
+            sheetCount = sheetCount + numSheets;
         },
         printJob(name, size) {
             if(size > this.sheetCount) throw new Error("Job failed: please refill paper tray!");
@@ -16,7 +16,7 @@ const Printer = (name, sheetCount = 0) => {
             for(let i = 1; i <= size; i++) {
             console.log(`Printing ${name} - page ${i} of ${size}`);
             }
-            this.sheetCount -= size;
+            sheetCount = sheetCount - size;
         }
     }
   };
@@ -27,7 +27,7 @@ const p1 = Printer("Canon", 5)
 console.log(p1)
 console.log(p1.name)
 
-p1.name = "Nikon"
+p1.name = "Nikon" // doesn't change name
 
 console.log(p1.name)
 
