@@ -26,11 +26,10 @@
 class Printer {
     #name; 
     #sheetCount;
-    
+
     constructor(name, sheetCount){
         this.#name = name;
         this.#sheetCount = sheetCount || 0;
-        
     }
 
     get name() {
