@@ -4,7 +4,7 @@ import React from "react"
  const Scrap2 = () => {
     const items = [`glasses`, `coffee`, `ball`, `shoes`]
 
-    let result = items.map((item, index) => {
+    const result = items.map((item, index) => {
         return <li key={index}>{item}</li>
     })
 
